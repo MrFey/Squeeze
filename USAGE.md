@@ -1,4 +1,4 @@
-usage: Squeeze.py [-h] [-w WORDS] [-f FILE] [-s [SPACES]] [-u [UPPERS]]
+usage: Squeeze.py [-h] [-w WORDS] [-f FILE] [-s [SPACES]] [-u [UPPER]]
                   [-m [MAX]] [-r [REP]]
 
 Creating a wordlist based on specific words
@@ -12,16 +12,15 @@ optional arguments:
                         Becareful, it would erase any existing file with the
                         same name
   -s [SPACES], --spaces [SPACES]
-                        option to add spaces in your words (default: 0) must
-                        be less than the number of words
-  -u [UPPERS], --upper [UPPERS]
-                        specifying the characters where you want to try to add
-                        upper case(don't take in count spaces) ex : -u "1,2,5"
+                        add spaces in your words (default: 0) must be less
+                        than the number of words
+  -u [UPPER], --upper [UPPER]
+                        1 for adding capitalize words(default: 0)
   -m [MAX], --max [MAX]
                         define the maximum length for a word (default: the sum
-                        of the length of all words)
+                        of the length of all words. Can not be 0)
   -r [REP], --rep [REP]
-                        define the maximum repetition of the words in the new
-                        word
+                        define the maximum occurance of the input words in the
+                        created word
 
 An open source software create by Arthur Naullet
