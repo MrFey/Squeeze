@@ -21,13 +21,13 @@ parser.add_argument('-S', '--strict', help='precise the exact length of the word
 args = parser.parse_args()
 
 if (not args.words):
-	print colored("[-]","red"),"Error: list of words is null"
+	print(colored("[-]","red"),"Error: list of words is null")
 	exit()
 
 # FUNCTIONS:
 def length_of_word():
 	if (args.strict):
-		print "len :",args.strict
+		#print "len :",args.strict
 		return args.strict
 	length_of_word=0
 	for i in words:
@@ -49,7 +49,7 @@ def creating_wordlist(wordlist,word,i):
 		if (i>=0):
 			i+=1
 			sys.stdout.write("\033[F")
-			print colored('[+] ','green')+"status: "+str(i*100/len(words)),"%"
+			print(colored('[+] ','green')+"status: "+str(i*100//len(words)),"%")
 			#time.sleep(1)
 
 def is_number(str):
@@ -68,19 +68,19 @@ length_of_word=length_of_word()
 if (args.max != 0):
 	length_of_word = args.max
 if(args.spaces > len(words)-1):
-	print colored('[-] ','red')+"Error: %s argument must be valid " % colored("spaces","red")
+	print(colored('[-] ','red')+"Error: %s argument must be valid " % colored("spaces","red"))
 	sys.exit()
 wordlist = []
 
 # PRINTING:
 if (args.strict != 0):
-	print colored('[+] ','green')+'creating words with %s characters ...' % colored(str(args.strict),'green')
+	print(colored('[+] ','green')+'creating words with %s characters ...' % colored(str(args.strict),'green'))
 else:
-	print colored('[+] ','green')+'creating words with %s characters max...' % colored(str(length_of_word),'green')
+	print(colored('[+] ','green')+'creating words with %s characters max...' % colored(str(length_of_word),'green'))
 if(file):
-	print colored('[+] ','green')+'saving the wordlist in %s...\n' % colored(file,'green')
+	print(colored('[+] ','green')+'saving the wordlist in %s...\n' % colored(file,'green'))
 else:
-	print colored('[+] ','green')+'printing the wordlist...\n'
+	print(colored('[+] ','green')+'printing the wordlist...\n')
 
 time.sleep(1)
 
@@ -96,7 +96,7 @@ if (file):
 else:
 	#print "\n"
 	for w in wordlist:
-		print w
+		print(w)
 
-print colored("[+]","green")+' process completed. %s words created.\n' % colored(str(len(wordlist)),"green")
+print(colored("[+]","green")+' process completed. %s words created.\n' % colored(str(len(wordlist)),"green"))
 
