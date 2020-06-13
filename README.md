@@ -1,6 +1,5 @@
-Squeeze is a python project, the program take different words in parameters and make an exhaustive wordlist - -with the different possibilities of mixing those words (switch the place put some Upper letters put some numbers etc...). It's like crunch but don't switch letters but words
+Squeeze is a python project, the program take different words in parameters and make an exhaustive wordlist with different possibilities of mixing (switch the, place put some Upper letters, put some numbers etc...). It's like crunch but it actually don't switch letters but words. The purpuse was obviously password cracking ^^
 
-If you have some questions just ask x)
+If you have some questions just ask ^^
 
-
-NB: if you don't have termcolor and don't want to dl it, use Squeeze_wb.py
+FEY.
