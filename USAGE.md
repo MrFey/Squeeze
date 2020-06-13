@@ -23,4 +23,4 @@ optional arguments:
                         define the maximum occurance of the input words in the
                         created word
 
-An open source software create by Arthur Naullet
+An open source software create by Fey
