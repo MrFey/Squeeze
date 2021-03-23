@@ -1,4 +1,6 @@
-'''all right: @Fey'''
+#! /usr/bin/env python3
+#-- all rights: @fey --#
+#-- py-version: 3.*  --#
 
 
 import argparse
@@ -59,44 +61,45 @@ def is_number(str):
 		return False
 	return True
 
-# VARIABLES:
-file =  args.file
-words= args.words.split(' ')
-upper= args.upper
-number_of_line=len(words)**len(words) # a pofiner
-length_of_word=length_of_word()	
-if (args.max != 0):
-	length_of_word = args.max
-if(args.spaces > len(words)-1):
-	print(colored('[-] ','red')+"Error: %s argument must be valid " % colored("spaces","red"))
-	sys.exit()
-wordlist = []
+if __name__ == "__main__":
+	# VARIABLES:
+	file =  args.file
+	words= args.words.split(' ')
+	upper= args.upper
+	number_of_line=len(words)**len(words) # a pofiner
+	length_of_word=length_of_word()	
+	if (args.max != 0):
+		length_of_word = args.max
+	if(args.spaces > len(words)-1):
+		print(colored('[-] ','red')+"Error: %s argument must be valid " % colored("spaces","red"))
+		sys.exit()
+	wordlist = []
 
-# PRINTING:
-if (args.strict != 0):
-	print(colored('[+] ','green')+'creating words with %s characters ...' % colored(str(args.strict),'green'))
-else:
-	print(colored('[+] ','green')+'creating words with %s characters max...' % colored(str(length_of_word),'green'))
-if(file):
-	print(colored('[+] ','green')+'saving the wordlist in %s...\n' % colored(file,'green'))
-else:
-	print(colored('[+] ','green')+'printing the wordlist...\n')
+	# PRINTING:
+	if (args.strict != 0):
+		print(colored('[+] ','green')+'creating words with %s characters ...' % colored(str(args.strict),'green'))
+	else:
+		print(colored('[+] ','green')+'creating words with %s characters max...' % colored(str(length_of_word),'green'))
+	if(file):
+		print(colored('[+] ','green')+'saving the wordlist in %s...\n' % colored(file,'green'))
+	else:
+		print(colored('[+] ','green')+'printing the wordlist...\n')
 
-time.sleep(1)
+	time.sleep(1)
 
-# PROGRAM
-args.rep =1 # waiting for rep arg to be fix ^^
-creating_wordlist(wordlist,"",0)
-wordlist.sort()
-if (file):
-	f = open(file,"w")
-	for w in wordlist:
-		f.write(w+"\n")
-	f.close()
-else:
-	#print "\n"
-	for w in wordlist:
-		print(w)
+	# PROGRAM
+	args.rep =1 # waiting for rep arg to be fix ^^
+	creating_wordlist(wordlist,"",0)
+	wordlist.sort()
+	if (file):
+		f = open(file,"w")
+		for w in wordlist:
+			f.write(w+"\n")
+		f.close()
+	else:
+		#print "\n"
+		for w in wordlist:
+			print(w)
 
-print(colored("[+]","green")+' process completed. %s words created.\n' % colored(str(len(wordlist)),"green"))
+	print(colored("[+]","green")+' process completed. %s words created.\n' % colored(str(len(wordlist)),"green"))
 
