@@ -80,11 +80,11 @@ if __name__ == "__main__":
 
 	# PRINTING:
 	if (args.strict != 0):
-		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters ...' % colored(str(args.strict),'green'))
+		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters ...' % colored(str(args.strict),'light_green', attrs=["bold"]))
 	else:
-		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters max...' % colored(str(length_of_word),'green'))
+		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters max...' % colored(str(length_of_word),'light_green', attrs=["bold"]))
 	if(file):
-		print('['+colored('+','light_green', attrs=["bold"])+'] saving the wordlist in %s...\n' % colored(file,'green'))
+		print('['+colored('+','light_green', attrs=["bold"])+'] saving the wordlist in %s...\n' % colored(file,'light_green', attrs=["bold"]))
 	else:
 		print('['+colored('+','light_green', attrs=["bold"])+'] printing the wordlist...\n')
 
@@ -109,5 +109,5 @@ if __name__ == "__main__":
 		for w in wordlist:
 			print(w)
 
-	print('['+colored("+","light_green")+'] process completed. %s words created.\n' % colored(str(len(wordlist)),"green"))
+	print('['+colored("+","light_green", attrs=["bold"])+'] process completed. %s words created.\n' % colored(str(len(wordlist)),'light_green', attrs=["bold"]))
 
