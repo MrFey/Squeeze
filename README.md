@@ -2,4 +2,7 @@ Squeeze is a python project, the program takes different words in argument and m
 
 If you have any questions just ask ^^
 
+
+Project been merged with https://github.com/t3l3machus/psudohash to add more common derivation
+
 @Fey.
