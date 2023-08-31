@@ -7,19 +7,19 @@ import argparse
 import sys
 import time
 import os
-from pseudohash_lib import derivate
+from psudohash_lib import derivate
 from termcolor import colored
 
 # PARSING:
 parser = argparse.ArgumentParser(description='Creating a wordlist based on specific words',
-								 epilog="An open source software create by Arthur Naullet ")
+								 epilog="An open source software create by @Fey and pseudohash from @t3l3machus")
 parser.add_argument('-w', '--words', help='the different words to mix up ex: -w \"word1 word2 word3\"',dest='words')
 parser.add_argument('-f', '--file', help='the file for saving the wordlist (optional). Becareful, it would erase any existing file with the same name',dest='file')
 parser.add_argument('-s', '--spaces', help='add spaces in your words (default: 0) must be less than the number of words',dest='spaces',nargs='?',type=int,default=0)
 parser.add_argument('-m', '--max', help='define the maximum length for a word (default: the sum of the length of all words. Can not be 0) ',dest='max',nargs='?',type=int,default=0)
 #parser.add_argument('-r', '--rep', help='define the maximum occurance of the input words in the created word',dest='rep',nargs='?',type=int,default=1)
 parser.add_argument('-S', '--strict', help='precise the exact length of the words including spaces',dest='strict',nargs='?',type=int,default=0)
-parser.add_argument('-d', '--derivation', help='based on pseudo hash project, derivate the words',dest='derivation',nargs='?',type=int,default=0)
+parser.add_argument('-d', '--derivation', help='based on psudohash project, derivate the words',dest='derivation',nargs='?',type=int,default=0)
 
 
 args = parser.parse_args()
@@ -80,11 +80,11 @@ if __name__ == "__main__":
 
 	# PRINTING:
 	if (args.strict != 0):
-		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters ...' % colored(str(args.strict),'light_green', attrs=["bold"]))
+		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters ...' % colored(str(args.strict),'green'))
 	else:
-		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters max...' % colored(str(length_of_word),'light_green', attrs=["bold"]))
+		print('['+colored('+','light_green', attrs=["bold"])+'] creating words with %s characters max...' % colored(str(length_of_word),'green'))
 	if(file):
-		print('['+colored('+','light_green', attrs=["bold"])+'] saving the wordlist in %s...\n' % colored(file,'light_green', attrs=["bold"]))
+		print('['+colored('+','light_green', attrs=["bold"])+'] saving the wordlist in %s...\n' % colored(file,'green'))
 	else:
 		print('['+colored('+','light_green', attrs=["bold"])+'] printing the wordlist...\n')
 
@@ -109,5 +109,5 @@ if __name__ == "__main__":
 		for w in wordlist:
 			print(w)
 
-	print('['+colored("+","light_green")+'] process completed. %s words created.\n' % colored(str(len(wordlist)),'light_green', attrs=["bold"]))
+	print('['+colored("+","light_green")+'] process completed. %s words created.\n' % colored(str(len(wordlist)),"green"))
 
